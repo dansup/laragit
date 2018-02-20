@@ -7,11 +7,16 @@ use Grit;
 
 class Repository extends Model
 {
+    public function user()
+    {
+      return $this->belongsTo(User::class);
+    }
+    
     public function url()
     {
       return url($this->slug);
     }
-    
+
     public function grit()
     {
       $git = new Grit('/usr/bin/git');
