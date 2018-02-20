@@ -10,7 +10,7 @@ window.Popper = require('popper.js').default;
 
 try {
     window.$ = window.jQuery = require('jquery');
-
+    window.filesize = require('filesize');
     require('bootstrap');
 } catch (e) {}
 
